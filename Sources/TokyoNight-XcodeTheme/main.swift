@@ -39,12 +39,25 @@ func installIosevkaFont() {
     _ = shell(brewCaskInstallCommand)
 }
 
+
+func copyThemesToXcode() {
+
+    let themes = ["Tokyo_Night_Light.xccolortheme", "Tokyo_Night_Storm.xccolortheme", "Tokyo_Night.xccolortheme"]
+    let destinationPath = "~/Library/Developer/Xcode/UserData/FontAndColorThemes/"
+    for theme in themes {
+        let copyCommand = "cp \(theme) \(destinationPath)"
+        print("Copying \(theme) to Xcode themes directory...")
+        _ = shell(copyCommand)
+    }
+}
+
 if !isBrewInstalled() {
     installBrew()
 }
 
 if !isIosevkaInstalled() {
     installIosevkaFont()
-} else {
-    }
+}
+
+copyThemesToXcode()
 
