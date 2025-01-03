@@ -47,7 +47,7 @@ Before installing the theme, ensure you have the following:
 1. **Clone the Repository:**
 
    ```sh
-   git clone https://github.com/yourusername/TokyoNight-XcodeTheme.git
+   git clone https://github.com/tornikegomareli/TokyoNight-XcodeTheme.git
    cd TokyoNight-XcodeTheme
    ```
 
